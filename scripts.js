@@ -4,15 +4,15 @@ const elements = {
 }
 
 function textFormatter(){
-    const textFormated = elements.inputText.toFixed(2)
+    let value = Number(elements.inputText.value)
 
-    return console.log(textFormated)
-       
+    let textFormated = value.toFixed(2)
 
+    return textFormated
 }
 
 function init(){
-textFormatter()
+    console.log(textFormatter())
 }
 
 init()

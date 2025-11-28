@@ -1,6 +1,7 @@
 
 const elements = {
-    inputText: document.getElementById("imput-text")
+    inputText: document.getElementById("imput-text"),
+    lista: document.getElementById("lista")
 }
 
 function textFormatter(){
@@ -10,6 +11,15 @@ function textFormatter(){
 
     return textFormated
 }
+
+let counter = 0
+//Eventos
+elements.link.addEventListener("click",()=>{
+
+    counter++
+    elements.numbers.textContent = counter
+})
+
 
 function init(){
     console.log(textFormatter())

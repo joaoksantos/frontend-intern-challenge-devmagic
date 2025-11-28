@@ -1,7 +1,9 @@
 
 const elements = {
     inputText: document.getElementById("imput-text"),
-    lista: document.getElementById("lista")
+    lista: document.getElementById("lista"),
+    links: document.getElementsByClassName("link"),
+    counters: document.getElementsByClassName("counter")
 }
 
 function textFormatter(){
@@ -12,13 +14,9 @@ function textFormatter(){
     return textFormated
 }
 
-let counter = 0
-//Eventos
-elements.link.addEventListener("click",()=>{
-
-    counter++
-    elements.numbers.textContent = counter
-})
+elements.lista.forEach(li => {
+    li.dataset.count = 0
+});
 
 
 function init(){
